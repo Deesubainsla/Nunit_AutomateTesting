@@ -15,7 +15,7 @@ namespace MyApp.Tests
         //     Assert.AreEqual(5, result);
         // }
 
-        [TestCase(2, 3, 5)]
+        [TestCase(2, 3, 4)]//error is here
         [TestCase(0, 0, 0)]
         [TestCase(-1, -1, -2)]
         [TestCase(10, -5, 5)]
