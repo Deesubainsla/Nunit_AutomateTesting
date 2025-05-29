@@ -1,0 +1,11 @@
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\bin\Debug\net9.0\MyApp.deps.json
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\bin\Debug\net9.0\MyApp.dll
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\bin\Debug\net9.0\MyApp.pdb
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.AssemblyInfoInputs.cache
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.AssemblyInfo.cs
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.csproj.CoreCompileInputs.cache
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.dll
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\refint\MyApp.dll
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\MyApp.pdb
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp\obj\Debug\net9.0\ref\MyApp.dll

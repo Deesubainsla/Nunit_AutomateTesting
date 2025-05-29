@@ -1,0 +1,6 @@
+projectKey=NunitTesting
+serverUrl=http://localhost:9000
+serverVersion=25.5.0.107428
+dashboardUrl=http://localhost:9000/dashboard?id=NunitTesting
+ceTaskId=b2e300bf-8051-4889-aed7-d7015a8f2590
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b2e300bf-8051-4889-aed7-d7015a8f2590
