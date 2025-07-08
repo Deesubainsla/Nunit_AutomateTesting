@@ -15,7 +15,7 @@ namespace MyApp.Tests
         //     Assert.AreEqual(5, result);
         // }
 
-        [TestCase(2, 3, 4)]//error is here
+        [TestCase(2, 3, 5)]
         [TestCase(0, 0, 0)]
         [TestCase(-1, -1, -2)]
         [TestCase(10, -5, 5)]
@@ -25,18 +25,9 @@ namespace MyApp.Tests
 
             int result = calc.Add(a, b);
 
+            Assert.AreEqual(expected, result);
             // TestContext.WriteLine($"Success for {a} and {b} for sum {result}");
 
-            try
-            {
-                Assert.AreEqual(expected, result);
-                TestContext.WriteLine($"Success for {a} and {b} for sum {result}");
-            }
-            catch (System.Exception)
-            {
-                //Will show error insted of Success
-                TestContext.WriteLine($"Error: for {a} and {b} for sum {result}");
-            }
             
         }
 
@@ -59,7 +50,7 @@ namespace MyApp.Tests
             int result = calc.Subtract(a, b);
             
             // Show output in test logs
-            TestContext.WriteLine($"Success for {a} - {b} = {result}");
+            // TestContext.WriteLine($"Success for {a} - {b} = {result}");
 
             Assert.AreEqual(expected, result);
         }

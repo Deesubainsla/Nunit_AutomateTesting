@@ -915,7 +915,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://retaildata.pkgs.visualstudio.com/_packaging/Feed1/nuget/v3/index.json": {}
       },
       "frameworks": {
         "net9.0": {
@@ -975,5 +975,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://retaildata.pkgs.visualstudio.com/_packaging/Feed1/nuget/v3/index.json."
+    }
+  ]
 }

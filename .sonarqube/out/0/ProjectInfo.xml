@@ -12,6 +12,7 @@
   <AnalysisSettings>
     <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\.sonarqube\out\0\Issues.json</Property>
     <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\.sonarqube\out\0</Property>
+    <Property Name="sonar.cs.scanner.telemetry">C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\.sonarqube\out\0\Telemetry.json</Property>
   </AnalysisSettings>
   <Configuration>Debug</Configuration>
   <Platform>AnyCPU</Platform>

@@ -98,3 +98,4 @@ C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp.Tests\obj\Debug
 C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.pdb
 C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.genruntimeconfig.cache
 C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp.Tests\obj\Debug\net9.0\ref\MyApp.Tests.dll
+C:\Users\DineshKumar\Desktop\Practice coding\Nunit testing\MyApp.Tests\obj\Debug\net9.0\MyApp.Tests.sourcelink.json

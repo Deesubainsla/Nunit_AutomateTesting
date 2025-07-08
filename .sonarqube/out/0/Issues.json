@@ -14,6 +14,27 @@
         {
           "ruleId": "S2325",
           "level": "warning",
+          "message": "Make 'Add' a static method.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///C:/Users/DineshKumar/Desktop/Practice%20coding/Nunit%20testing/MyApp/Calculator.cs",
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 17,
+                  "endLine": 7,
+                  "endColumn": 20
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S2325",
+          "level": "warning",
           "message": "Make 'Subtract' a static method.",
           "locations": [
             {
@@ -33,27 +54,6 @@
           }
         },
         {
-          "ruleId": "S2325",
-          "level": "warning",
-          "message": "Make 'Add' a static method.",
-          "locations": [
-            {
-              "resultFile": {
-                "uri": "file:///C:/Users/DineshKumar/Desktop/Practice%20coding/Nunit%20testing/MyApp/Calculator.cs",
-                "region": {
-                  "startLine": 7,
-                  "startColumn": 16,
-                  "endLine": 7,
-                  "endColumn": 19
-                }
-              }
-            }
-          ],
-          "properties": {
-            "warningLevel": 1
-          }
-        },
-        {
           "ruleId": "CA1822",
           "level": "note",
           "message": "Member 'Add' does not access instance data and can be marked as static",
@@ -63,9 +63,9 @@
                 "uri": "file:///C:/Users/DineshKumar/Desktop/Practice%20coding/Nunit%20testing/MyApp/Calculator.cs",
                 "region": {
                   "startLine": 7,
-                  "startColumn": 16,
+                  "startColumn": 17,
                   "endLine": 7,
-                  "endColumn": 19
+                  "endColumn": 20
                 }
               }
             }
