@@ -47,3 +47,65 @@ jobs:
 
     - name: SonarQube end analysis
       run: dotnet sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
+
+
+    # new changes for email functionality
+
+
+    # ✅ Wait to ensure SonarCloud finished processing the analysis
+    - name: Wait for SonarCloud processing
+      run: |
+       echo "Waiting for 60s to complete the sonar test"
+       sleep 60
+
+    # ✅ Fetch metrics and issues from SonarCloud API
+    - name: Fetch SonarCloud analysis data
+      id: fetch_sonar
+      run: |
+        echo "Fetching data from sonar API"
+        PROJECT_KEY="Deesubainsla_Nunit_AutomateTesting"
+        SONAR_TOKEN="${{ secrets.SONAR_TOKEN }}"
+
+        # Fetch metrics
+        curl -s -u "$SONAR_TOKEN:" "https://sonarcloud.io/api/measures/component?component=${PROJECT_KEY}&metricKeys=bugs,vulnerabilities,code_smells,coverage,duplicated_lines_density" \
+          -o sonar_metrics.json
+
+        # Fetch issues (first 100 issues)
+        curl -s -u "$SONAR_TOKEN:" "https://sonarcloud.io/api/issues/search?componentKeys=${PROJECT_KEY}&ps=100" \
+          -o sonar_issues.json
+
+    # ✅ Create a readable Markdown summary report
+    - name: Create SonarCloud summary report
+      run: |
+        echo "# SonarCloud Analysis Summary" > sonar_report.md
+        echo "" >> sonar_report.md
+
+        echo "## Metrics" >> sonar_report.md
+        jq -r '.component.measures[] | "- \(.metric): \(.value)"' sonar_metrics.json >> sonar_report.md
+
+        echo "" >> sonar_report.md
+        echo "## Top 5 Issues" >> sonar_report.md
+        jq -r '.issues[:5][] | "- [\(.severity)] \(.message) (File: \(.component // "N/A"), Line: \(.line // "N/A"))"' sonar_issues.json >> sonar_report.md
+
+        echo "" >> sonar_report.md
+        echo "[🔎 View full SonarCloud report](https://sonarcloud.io/project/overview?id=Deesubainsla_Nunit_AutomateTesting)" >> sonar_report.md
+
+    # ✅ Email the summary report
+    - name: Send email with SonarCloud report
+      uses: dawidd6/action-send-mail@v3
+      with:
+        server_address: smtp.gmail.com
+        server_port: 465
+        username: "deesubainsla340@gmail.com"
+        password: "xfzv yjol wxtz qmhj"
+        subject: "SonarCloud Analysis Report - ${{ github.repository }}"
+        to: "dinesh.kumar@rdsolutions.in"
+        from: "Dinesh for Sonar_Demo <deesubainsla340@gmail.com>"
+        body: |
+          Hi,
+
+          Please find attached the summary report from SonarCloud analysis.
+
+          Thanks,
+          CI Bot
+        attachments: sonar_report.md
