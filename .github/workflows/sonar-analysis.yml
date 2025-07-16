@@ -84,8 +84,9 @@ jobs:
         jq -r '.component.measures[] | "- \(.metric): \(.value)"' sonar_metrics.json >> sonar_report.md
 
         echo "" >> sonar_report.md
-        echo "## Top 5 Issues" >> sonar_report.md
-        jq -r '.issues[:5][] | "- [\(.severity)] \(.message) (File: \(.component // "N/A"), Line: \(.line // "N/A"))"' sonar_issues.json >> sonar_report.md
+        echo "## All Issues" >> sonar_report.md
+        jq -r '.issues[] | "- [\(.severity)] \(.message) (File: \(.component // "N/A"), Line: \(.line // "N/A"))"' sonar_issues.json >> sonar_report.md
+
 
         echo "" >> sonar_report.md
         echo "[🔎 View full SonarCloud report](https://sonarcloud.io/project/overview?id=Deesubainsla_Nunit_AutomateTesting)" >> sonar_report.md
