@@ -101,7 +101,7 @@ jobs:
         password: "xfzv yjol wxtz qmhj"
         subject: "SonarCloud Analysis Report - ${{ github.repository }}"
         to: "dinesh.kumar@rdsolutions.in"
-        from: "Dinesh for Sonar_Demo <deesubainsla340@gmail.com>"
+        from: "Sonar_Test Report from Dinesh<deesubainsla340@gmail.com>"
         body: |
           Hi,
 
