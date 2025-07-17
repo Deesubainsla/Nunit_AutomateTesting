@@ -55,8 +55,8 @@ jobs:
     # ✅ Wait to ensure SonarCloud finished processing the analysis
     - name: Wait for SonarCloud processing
       run: |
-       echo "Waiting for 60s to complete the sonar test"
-       sleep 60
+       echo "Waiting for 30s to complete the sonar test"
+       sleep 30
 
     # ✅ Fetch metrics and issues from SonarCloud API
     - name: Fetch SonarCloud analysis data
